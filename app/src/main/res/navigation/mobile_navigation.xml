@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="uz.test.listapp.ui.alltask.HomeFragment"
+        android:label="Все "
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment"
+            app:popUpTo="@id/addNewTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="uz.test.listapp.ui.donetask.DoneTasksFragment"
+        android:label="@string/done"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="uz.test.listapp.ui.inprogress.InProgressFragment"
+        android:label="@string/inProgress"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/addNewTaskFragment"
+        android:name="uz.test.listapp.ui.addtask.AddNewTaskFragment"
+        android:label="@string/addNewTasks"
+        tools:layout="@layout/fragment_add_new_task" />
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="uz.test.listapp.ui.updatetask.UpdateTaskFragment"
+        android:label="@string/editTask"
+        tools:layout="@layout/fragment_update_task" />
+</navigation>
